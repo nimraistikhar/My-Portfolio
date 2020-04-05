@@ -45,6 +45,7 @@
         </header>
 
 
+
         <!-- ************* ABOUT *************** -->
 
         <section id="about">
@@ -52,26 +53,26 @@
                 <h2 class="heading-secondary">About</h2>
     
                         <div class="about">
-                                   <div class="about-part">
+                                   <div data-scroll class="about-part">
                                           <i class="ion-speedometer icon"></i>
                                           <h3 class="heading-about">Fast</h3>
                                           <p class="about-paragraph">Fast load times and lag free interaction, my highest priority.</p>
                                 </div>
 
-                                <div class="about-part">
+                                <div data-scroll class="about-part">
                                           <i class="ion-ios-browsers icon"></i>
                                           <h3 class="heading-about">Responsive</h3>
                                           <p class="about-paragraph">My layouts will work on any device, big or small.</p>
                                 </div>
                                 
 
-                                 <div class="about-part">
+                                 <div data-scroll class="about-part">
                                             <i class="ion-ios-lightbulb icon"></i>
                                             <h3 class="heading-about">Intuitive</h3>
                                             <p class="about-paragraph">Strong preference for easy to use, intuitive UX/UI.</p>
                                  </div>
 
-                                 <div class="about-part">
+                                 <div data-scroll class="about-part">
                                             <i class="ion-paper-airplane icon"></i>
                                             <h3 class="heading-about">Dynamic</h3>
                                             <p class="about-paragraph">Websites don't have to be static, I love making pages come to life. </p>
@@ -93,15 +94,15 @@
                          <div class="project__kinds">
 
                                         <div class="container image1">
-                                                <img src="img/Portfolio.png" alt="Avatar" class="image" style="width:100%">
+                                                <img data-scroll src="img/Portfolio.png" alt="Avatar" class="image" style="width:100%">
                                                 <div class="middle">
                                                       <div class="text">My Pervious Portfolio</div>
                                                       <a href="http://nimra.surge.sh/" class="btn-site">View Site</a>
                                                 </div>
                                         </div>
 
-                                        <div class="container image2">
-                                                <img src="img/Coding-service.png" alt="Coding-service" class="image" style="width:100%">
+                                        <div  class="container image2">
+                                                <img data-scroll src="img/Coding-service.png" alt="Coding-service" class="image" style="width:100%">
                                                 <div class="middle">
                                                       <div class="text">Coding-service</div>
                                                       <a href="http://coding-service.surge.sh/" class="btn-site">View Site</a>
@@ -144,6 +145,32 @@
                            </ul>    
                     </div>
             </footer>
+
+
+            <!--  ****************    JAVASCRIPT-PART    *********************  -->
+
+            <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
+            <script>
+                   ScrollOut({
+                       threshold: .5
+                   });
+                  ScrollOut({
+                       onShown: function(el) {
+                       // remove the class
+                       el.classList.remove("animated");
+                   
+                       // force reflow
+                       void el.offsetWidth;
+                   
+                       // re-add the animated cl
+                       el.classList.add("animated");
+                      }
+                  });
+      
+      
+          </script>
+
  
 </body>
 </html>

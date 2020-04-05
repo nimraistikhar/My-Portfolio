@@ -538,3 +538,17 @@ h2::after {
         transform: scale(1);
     }
 }
+
+[data-scroll] {
+    transition: all 1s;
+}
+
+[data-scroll="in"] {
+    opacity: 1;
+    transform: scale(1);
+}
+
+[data-scroll="out"] {
+    opacity: 0;
+    transform: scale(0.5);
+}

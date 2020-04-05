@@ -34,7 +34,7 @@
 
                 <h2 class="heading-secondary">Project</h2>
 
-                     <div class="project__kinds">
+                     <div data-scroll class="project__kinds">
 
                                     <div class="container">
                                             <img src="img/Portfolio.png" alt="Avatar" class="image" style="width:100%">
@@ -53,7 +53,7 @@
                                     </div>
                      </div>
 
-                     <div class="project__kinds i1">
+                     <div data-scroll class="project__kinds i1">
 
                         <div class="container">
                                 <img src="img/Everlane.png" alt="Avatar" class="image" style="width:100%">
@@ -72,7 +72,7 @@
                         </div>
                      </div>
 
-                     <div class="project__kinds i2">
+                     <div data-scroll class="project__kinds">
 
                         <div class="container">
                                 <img src="img/Omnifood.png" alt="Avatar" class="image" style="width:100%">
@@ -121,6 +121,28 @@
                     </ul>    
           </div>
    </footer>
+
+   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
+   <script>
+          ScrollOut({
+              threshold: .5
+          });
+         ScrollOut({
+              onShown: function(el) {
+              // remove the class
+              el.classList.remove("animated");
+          
+              // force reflow
+              void el.offsetWidth;
+          
+              // re-add the animated cl
+              el.classList.add("animated");
+             }
+         });
+
+
+  </script>
 
 </body>   
 </html>
